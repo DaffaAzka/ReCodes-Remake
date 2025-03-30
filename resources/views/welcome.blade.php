@@ -19,7 +19,7 @@
                 </blockquote>
             </div>
 
-            <livewire:article.lists />
+            <livewire:article.index />
         </div>
     </div>
 

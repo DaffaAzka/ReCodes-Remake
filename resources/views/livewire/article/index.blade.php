@@ -13,7 +13,7 @@
             <p class="mt-2 text-gray-500 dark:text-neutral-400 line-clamp-2">
               {{ $article->description }}
             </p>
-            <a class="mt-3 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-purple-600 decoration-2 hover:text-purple-700 hover:underline focus:underline focus:outline-hidden focus:text-purple-700 disabled:opacity-50 disabled:pointer-events-none dark:text-purple-500 dark:hover:text-purple-600 dark:focus:text-purple-600" href="#">
+            <a class="mt-3 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-purple-600 decoration-2 hover:text-purple-700 hover:underline focus:underline focus:outline-hidden focus:text-purple-700 disabled:opacity-50 disabled:pointer-events-none dark:text-purple-500 dark:hover:text-purple-600 dark:focus:text-purple-600" href="{{ route('article.content', $article->slug) }}">
               View Content
               <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="m9 18 6-6-6-6"></path>
