@@ -4,15 +4,24 @@ namespace App\Livewire\Article;
 
 use App\Models\Article;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Index extends Component
 {
+
+    use WithPagination;
+    // protected $paginationTheme = '';
+    public $article = [];
+    public $load = false;
+
+    public function setLoad() {
+        $this->load = true;
+    }
     public function render()
     {
-        $articles = Article::orderBy("created_at","desc")->paginate(3);
 
         return view('livewire.article.index', [
-            'articles'=> $articles
+            'articles'=> $this->load ? Article::orderBy("created_at","desc")->paginate(3) : []
         ]);
     }
 }
