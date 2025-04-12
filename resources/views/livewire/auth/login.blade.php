@@ -8,9 +8,12 @@
                 class="flex flex-col mx-4 shadow-2xs rounded-xl bg-white dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 p-8 md:mx-0 md:rounded-none">
 
                 <div class="flex items-center h-[90%]">
-                    <form action="" wire:submit.prevent="login" class="space-y-6 md:min-w-2xs lg:min-w-xs xl:min-w-md">
+                    <form action="" wire:submit.prevent="login"
+                        class="space-y-6 md:min-w-2xs lg:min-w-xs xl:min-w-md">
+                        @csrf
                         <h1 class="text-3xl text-center dark:text-amber-50 font-semibold">Login</h1>
 
+                        <x-utilities.success />
                         <div class="space-y-2">
                             <div class="relative">
                                 <input wire:model='email' type="email"
@@ -53,7 +56,8 @@
                             <span class="text-center w-full">Submit</span>
                         </button>
 
-                        <p class="text-center dark:text-white"><a href="" class="">Don't have an account?
+                        <p class="text-center dark:text-white"><a href="{{ route('register') }}" class="">Don't
+                                have an account?
                                 <span class="text-purple-500 animate-pulse">Click here!</span></a></p>
 
                     </form>
@@ -61,7 +65,8 @@
 
             </div>
 
-            <div class="hidden md:block bg-cover bg-center h-[70vh] relative" style="background-image: url('{{ asset('storage/pattern.jpg') }}');">
+            <div class="hidden md:block bg-cover bg-center h-[70vh] relative"
+                style="background-image: url('{{ asset('storage/pattern.jpg') }}');">
 
             </div>
 
@@ -69,5 +74,7 @@
 
     </div>
 
+
+    <x-utilities.loading />
 
 </div>

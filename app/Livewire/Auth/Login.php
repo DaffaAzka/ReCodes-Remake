@@ -12,16 +12,16 @@ class Login extends Component
     #[Validate('required|email')]
     public $email;
 
-    #[Validate('required|password')]
+    #[Validate('required')]
     public $password;
 
 
     public function login() {
         $this->validate();
 
-        if (Auth::attempt($this->email, $this->password)) {
+        if (Auth::attempt(['email'=> $this->email,'password'=> $this->password])) {
             session()->regenerate();
-            // return redirect()->intended('/dashboard');
+
         }
     }
 

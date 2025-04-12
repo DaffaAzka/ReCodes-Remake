@@ -9,7 +9,9 @@ Route::get('/', function () {
     return view('welcome');
 })->name('index');
 
-Route::get('/login', Login::class)->name('login');
-Route::get('register', Register::class)->name('register');
 Route::get('/article/{slug}', Show::class)->name('article.content');
 
+Route::middleware(['guest'])->group(function () {
+    Route::get('/login', Login::class)->name('login');
+    Route::get('register', Register::class)->name('register');
+});

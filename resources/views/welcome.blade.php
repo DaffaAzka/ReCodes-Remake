@@ -14,7 +14,7 @@
 
                     <div class="relative z-10">
                     <p class="text-gray-800 sm:text-xl dark:text-white"><em>
-                        Free speech is not just about the right to speak—it’s about the right to listen, question, and think.                        </em></p>
+                        Free speech is not just about the right to speak—it’s about the right to listen, question, and think.</em></p>
                     </div>
                 </blockquote>
             </div>
