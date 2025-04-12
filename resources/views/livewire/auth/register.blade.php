@@ -86,7 +86,7 @@
                         </div>
 
                         <button type="submit"
-                            class="w-full py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-purple-600 text-white hover:bpurpleue-700 focus:outline-hidden focuspurplepurple-700 disabled:opacity-50 disabled:pointer-events-none">
+                            class="w-full py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-purple-600 text-white hover:bg-purple-700 focus:outline-hidden focus:bg-purple-700 disabled:opacity-50 disabled:pointer-events-none transition">
                             <span class="text-center w-full">Submit</span>
                         </button>
 
@@ -109,5 +109,7 @@
     </div>
 
     <x-utilities.loading />
+
+    <x-links-background />
 
 </div>

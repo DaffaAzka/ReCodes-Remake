@@ -23,7 +23,7 @@
 </head>
 <body class="bg-gray-100 dark:bg-neutral-900">
 
-    @if (!request()->is('login') && !request()->is('register'))
+    @if (!request()->is('login') && !request()->is('register')  && !request()->is('/'))
     <livewire:navbar />
     @endif
 
