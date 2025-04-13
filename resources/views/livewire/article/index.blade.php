@@ -13,7 +13,7 @@
                         {{ $article->created_at->diffForHumans() }}
                     </p>
                     <p class="mt-2 text-gray-500 dark:text-neutral-400 line-clamp-2">
-                        {{ $article->description }}
+                        {!! $article->content !!}
                     </p>
                     <a class="mt-3 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-purple-600 decoration-2 hover:text-purple-700 hover:underline focus:underline focus:outline-hidden focus:text-purple-700 disabled:opacity-50 disabled:pointer-events-none dark:text-purple-500 dark:hover:text-purple-600 dark:focus:text-purple-600"
                         href="{{ route('article.content', $article->slug) }}">

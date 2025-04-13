@@ -1,6 +1,6 @@
 <div class="container md:mx-auto py-4 space-y-6">
 
-    <div class="px-4 space-y-6">
+    <div class="space-y-6">
         <h1 class="text-3xl font-medium text-center dark:text-amber-50">Articles</h1>
 
 
