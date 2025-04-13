@@ -12,10 +12,6 @@ class Navbar extends Component
         return view('livewire.navbar');
     }
 
-    public function create() {
-        return redirect()->route('option-store');
-    }
-
     public function signOut() {
         Auth::logout();
         session()->invalidate();
