@@ -3,6 +3,7 @@
 namespace App\Livewire\Article;
 
 use App\Models\Article;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Livewire\Attributes\On;
 use Livewire\Attributes\Validate;
@@ -27,12 +28,17 @@ class Store extends Component
             'slug' => $this->createSlugged(),
             'content' => $this->content,
             'image' => $this->image,
+            'user_id' => Auth::id(),
         ]);
 
         if ($article->save()) {
-            session()->flash('success', [
-                'title' => 'Article created successfully',
-                'message' => 'You can view your article now',
+            // session()->flash('success', [
+            //     'title' => 'Article created successfully',
+            //     'message' => 'You can view your article now',
+            // ]);
+
+            return redirect()->route('article.content', [
+                'slug' => $article->slug,
             ]);
         }
 
