@@ -27,7 +27,7 @@ This project reimagines my previous blogging platform with cutting-edge technolo
 
 | 🔥 Core Features | 🧠 Advanced Implementations |
 |:---------------:|:-------------------------:|
-| **Custom WYSIWYG Editor** | Built from scratch with Livewire, no external libraries |
+| **Custom WYSIWYG Editor** | Built from javascript libraries |
 | **Version Control** | Git-like history for your content |
 | **Publishing Workflow** | Professional editorial process |
 | **SEO Suite** | Optimize your content visibility |
