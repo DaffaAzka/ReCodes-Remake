@@ -13,7 +13,7 @@
                 placeholder="Write article title" />
             @error('title')
                 <span class="text-red-500 text-sm">{{ $message }}</span>
-            @enderror
+            @enderror   
         </div>
 
         <livewire:utilities.tooltip-editor />

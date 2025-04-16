@@ -1,4 +1,4 @@
-<div class="" wire:init='setLoad'>
+<div class="space-y-6" wire:init='setLoad'>
     @if ($load)
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -29,9 +29,16 @@
 
         </div>
 
-        <div class="mt-4">
+        @if ($pages <= $sizes)
+            <button wire:click='addPages' 
+                class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border hover:text-white hover:bg-purple-600 border-purple-600 text-purple-600 hover:border-purple-500 focus:outline-hidden focus:border-purple-500 focus:text-purple-500 disabled:opacity-50 disabled:pointer-events-none dark:border-purple-500 dark:text-purple-500 dark:hover:text-white dark:hover:border-purple-400">Load
+                More</button>
+        @endif
+
+
+        {{-- <div class="mt-4">
             {{ $articles->links('vendor.pagination.tailwind') }}
-        </div>
+        </div> --}}
     @else
         <div class="animate-pulse">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -55,4 +62,14 @@
         </div>
     @endif
 
+    {{-- <x-utilities.loading /> --}}
+
+    <div wire:loading wire:target='addPages'
+        class="fixed inset-0 z-50 bg-gray-200/50 dark:bg-neutral-900/50 backdrop-blur-sm transition-all duration-200">
+        <div class="w-full h-full flex items-center justify-center">
+            <div class="animate-spin inline-block size-10 border-3 border-current border-t-transparent text-purple-600 rounded-full dark:text-purple-500"
+                role="status" aria-label="loading">
+            </div>
+        </div>
+    </div>
 </div>

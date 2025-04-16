@@ -20,6 +20,7 @@ class ArticleFactory extends Factory
             "title"=> $this->faker->sentence,
             "slug"=> $this->faker->slug,
             "content"=> $this->faker->paragraphs(3, true),
+            "user_id" => 1,
         ];
     }
 }

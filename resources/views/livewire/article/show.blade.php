@@ -16,8 +16,8 @@
                 <div
                     class="inline-flex flex-nowrap items-center bg-white border border-gray-200 rounded-full p-1.5 pe-3 dark:bg-neutral-900 dark:border-neutral-700">
                     <span
-                        class="me-1.5 inline-flex items-center justify-center size-6 text-sm font-semibold rounded-full bg-blue-100 text-blue-800 dark:bg-blue-800/30 dark:text-blue-500">
-                        {{ Str::ucfirst(Auth::user()->name[0]) }}
+                        class="me-1.5 inline-flex items-center justify-center size-6 text-sm font-semibold rounded-full bg-purple-100 text-purple-800 dark:bg-purple-800/30 dark:text-purple-500">
+                        {{ Str::ucfirst($article->user->name[0]) }}
                     </span>
                     {{-- <img class="me-1.5 inline-block size-6 rounded-full" src="https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80" alt="Avatar"> --}}
                     <div class="whitespace-nowrap text-sm font-medium text-gray-800 dark:text-white">
