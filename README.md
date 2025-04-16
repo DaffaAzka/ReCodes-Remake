@@ -4,7 +4,6 @@
 
 ### _Where Code Meets Creativity_
 
-![ReCodes Banner](https://via.placeholder.com/800x200)
 
 [![Laravel](https://img.shields.io/badge/Laravel-12.0-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com)
 [![Livewire](https://img.shields.io/badge/Livewire-3.0-FB70A9?style=for-the-badge&logo=livewire&logoColor=white)](https://livewire.laravel.com)
