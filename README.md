@@ -1,8 +1,6 @@
 <div align="center">
   
-# 🚀 ReCodes
-
-### _Where Code Meets Creativity_
+# ReCodes
 
 
 [![Laravel](https://img.shields.io/badge/Laravel-12.0-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com)
