@@ -1,8 +1,6 @@
 <div align="center">
   
-# 🚀 ReCodes
-
-### _Where Code Meets Creativity_
+# ReCodes
 
 
 [![Laravel](https://img.shields.io/badge/Laravel-12.0-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com)
@@ -29,7 +27,7 @@ This project reimagines my previous blogging platform with cutting-edge technolo
 
 | 🔥 Core Features | 🧠 Advanced Implementations |
 |:---------------:|:-------------------------:|
-| **Custom WYSIWYG Editor** | Built from scratch with Livewire, no external libraries |
+| **Custom WYSIWYG Editor** | Built from javascript libraries |
 | **Version Control** | Git-like history for your content |
 | **Publishing Workflow** | Professional editorial process |
 | **SEO Suite** | Optimize your content visibility |
