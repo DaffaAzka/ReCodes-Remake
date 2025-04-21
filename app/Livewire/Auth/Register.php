@@ -37,6 +37,7 @@ class Register extends Component
         ]);
 
         if ($user) {
+            // $user->assignRole('user');
             return redirect()->route('login')->with("success", [
                 'title' => 'Registration successful',
                 'message' => 'Now you can login with your account',

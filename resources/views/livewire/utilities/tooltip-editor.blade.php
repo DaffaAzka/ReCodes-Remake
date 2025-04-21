@@ -129,7 +129,7 @@
                     </button>
                 </div>
 
-                <div class="h-40 overflow-auto" data-hs-editor-field></div>
+                <div class="h-[55vh] overflow-auto" data-hs-editor-field></div>
             </div>
         </div>
 

@@ -19,7 +19,7 @@ class Index extends Component
 
     public function setLoad() {
         $this->load = true;
-        $this->article = Article::take($this->pages)->orderBy("created_at","desc")->get();
+        Article::latest()->take($this->pages)->get();
     }
 
     public function addPages() {
@@ -31,10 +31,10 @@ class Index extends Component
 
     public function render()
     {
-
+        $this->article = Article::latest()->take($this->pages)->get();
         return view('livewire.article.index', [
             'articles'=>  $this->article,
-            'sizes' => Article::get()->count(),
+            'sizes' => Article::count(),
         ]);
     }
 }

@@ -21,7 +21,7 @@ Route::middleware(['guest'])->group(function () {
 });
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/option-store', OptionStore::class)->name('option-store');
+    // Route::get('/option-store', OptionStore::class)->name('option-store');
     Route::get('/dashboard', Dashboard::class)->name('dashboard');
 
     Route::get('/article/{slug}', Show::class)->name('article.content');
