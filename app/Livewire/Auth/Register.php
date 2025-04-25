@@ -3,6 +3,7 @@
 namespace App\Livewire\Auth;
 
 use App\Models\User;
+use App\Models\VerificationCode;
 use Illuminate\Support\Str;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
@@ -38,10 +39,13 @@ class Register extends Component
 
         if ($user) {
             // $user->assignRole('user');
-            return redirect()->route('login')->with("success", [
-                'title' => 'Registration successful',
-                'message' => 'Now you can login with your account',
+            VerificationCode::create([
+                'ip_address' => \Request()->ip(),
+                'code' => Str::random(6),
+                'email' => $this->email,
+                'expires_at' => now()->addMinutes(15),
             ]);
+            return redirect()->route('verify');
         }
     }
 
