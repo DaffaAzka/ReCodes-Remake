@@ -9,6 +9,7 @@ use App\Livewire\Auth\Register;
 use App\Livewire\Auth\Verify;
 use App\Livewire\Dashboard;
 use App\Livewire\OptionStore;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 
@@ -21,6 +22,10 @@ Route::middleware(['guest'])->group(function () {
     Route::get('/', function () {
         return view('welcome');
     })->name('index');
+
+    Route::get('/test-email', function () {
+        Mail::to('destdevs@gmail.com')->send(new \App\Mail\TestEmail());
+    })->name('test-email');
 });
 
 Route::middleware(['auth'])->group(function () {

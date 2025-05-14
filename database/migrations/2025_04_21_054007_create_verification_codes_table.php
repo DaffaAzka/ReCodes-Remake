@@ -17,7 +17,7 @@ return new class extends Migration
             $table->char('code', 6);
             $table->string('email');
             $table->date('expires_at');
-            // $table->timestamps();
+                
         });
     }
 

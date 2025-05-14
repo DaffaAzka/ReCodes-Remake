@@ -23,7 +23,7 @@ class Login extends Component
         $this->validate();
 
         if (Auth::attempt(['email'=> $this->email,'password'=> $this->password])) {
-            // $user = Auth::user();
+            // $user =  
             $user = User::where('email', $this->email)->first();
             // dd($user);
 
